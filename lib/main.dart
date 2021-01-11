@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import './quiz.dart';
 import './result.dart';
-// void main() {
-//   runApp(MyApp());
-// }
 
 void main() => runApp(MyApp());
 
@@ -57,30 +54,15 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _answerQuestion(int score) {
-    // var aBool = true;
-    // aBool = false;
-
     _totalScore += score;
 
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
-    print(_questionIndex);
-    if (_questionIndex < _questions.length) {
-      print('We have more questions!');
-    } else {
-      print('No more questions!');
-    }
   }
 
   @override
   Widget build(BuildContext context) {
-    // var dummy = const ['Hello'];
-    // dummy.add('Max');
-    // print(dummy);
-    // dummy = [];
-    // questions = []; // does not work if questions is a const
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
